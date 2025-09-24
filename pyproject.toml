@@ -1,0 +1,31 @@
+[project]
+name = "order-service"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "NoooNlIoN", email = "vla.chernickov@gmail.com" }
+]
+dependencies = [
+    "fastapi>=0.117.1",
+    "alembic>=1.16.5",
+    "uvicorn>=0.36.0",
+    "pydantic>=2.11.9",
+    "pydantic-settings>=2.10.1",
+    "asyncpg>=0.30.0",
+    "ruff>=0.13.1",
+]
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/order_service"]
