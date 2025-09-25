@@ -1,8 +1,6 @@
 import asyncio
 from decimal import Decimal
-from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.config.settings import settings
 from src.infrastructure.database.engine import AsyncSessionLocal
 from src.domain.models.category import Category
 from src.domain.models.client import Client
@@ -55,6 +53,7 @@ async def create_test_data():
             print("Выполнено успешно")
             
         except Exception as e:
+            print(f"Критическая ошибка: {e}")
             await session.rollback()
             raise
 
