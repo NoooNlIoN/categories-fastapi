@@ -6,6 +6,8 @@ cp .env.example .env
 docker-compose up -d --build
 ```
 
+- Для тестов в start.sh добавлен запуск скрипта для заполнения базы данных, при необходимости удалите.
+
 ### Доступ к API
 - **Swagger UI**: http://localhost:8000/docs
 -  **ReDoc**: http://localhost:8000/redoc
