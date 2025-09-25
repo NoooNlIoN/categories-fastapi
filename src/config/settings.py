@@ -5,7 +5,6 @@ class Settings(BaseSettings):
     SERVER_HOST: str
     SERVER_PORT: int
     RELOAD: bool
-    SERVER_WORKERS: int
 
     class Config:
         env_file = ".env"

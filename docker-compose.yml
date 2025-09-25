@@ -1,6 +1,4 @@
 
-
-
 services:
   postgresql:
     image: postgres:17
@@ -25,7 +23,6 @@ services:
       SERVER_HOST: 0.0.0.0
       SERVER_PORT: 8000
       RELOAD: "false"
-      SERVER_WORKERS: 1
     depends_on:
       - postgresql
     restart: unless-stopped
